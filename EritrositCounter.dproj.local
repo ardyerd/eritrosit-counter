@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/05/09 12:48:16.000.162,=C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/05/10 16:30:47.000.155,=C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/06/16 04:49:18.000.133,=C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/06/16 04:55:27.000.011,=C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/06/16 05:27:07.000.428,C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.pas=D:\BENGKEL\EritrositCounter\UnitFormUtama.pas</Transaction>
+    <Transaction>2012/06/16 05:27:07.000.428,C:\Users\lenovo\Documents\RAD Studio\Projects\Unit1.dfm=D:\BENGKEL\EritrositCounter\UnitFormUtama.dfm</Transaction>
+    <Transaction>2012/06/16 05:27:21.000.320,C:\Users\lenovo\Documents\RAD Studio\Projects\Project1.dproj=D:\BENGKEL\EritrositCounter\EritrositCounter.dproj</Transaction>
+    <Transaction>2012/06/16 05:27:54.000.686,=D:\KULIAH\SKRIPSI\Program\UnitFormBuffer.pas</Transaction>
+    <Transaction>2012/06/16 05:33:10.000.185,=D:\KULIAH\SKRIPSI\Program\About.pas</Transaction>
+    <Transaction>2012/06/16 05:38:41.000.969,D:\KULIAH\SKRIPSI\Program\About.pas=</Transaction>
+    <Transaction>2012/06/16 05:38:45.000.216,D:\KULIAH\SKRIPSI\Program\UnitFormBuffer.pas=</Transaction>
+    <Transaction>2012/06/16 05:38:55.000.333,=D:\BENGKEL\EritrositCounter\About.pas</Transaction>
+    <Transaction>2012/06/16 05:38:55.000.392,=D:\BENGKEL\EritrositCounter\UnitFormBuffer.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,116 @@
+unit UnitFormBuffer;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Menus, JPEG,
+  Vcl.ExtDlgs;
+
+type
+  TFormBuffer = class(TForm)
+    CitraHasil: TImage;
+    Label1: TLabel;
+    CitraKeabuan: TImage;
+    Label2: TLabel;
+    CitraEkualisasi: TImage;
+    Label3: TLabel;
+    CitraPengambangan: TImage;
+    CitraPelabelan: TImage;
+    Pelabelan: TLabel;
+    Label4: TLabel;
+    CitraFilterLuas: TImage;
+    Label5: TLabel;
+    Label6: TLabel;
+    CitraErosi: TImage;
+    CitraDilasi: TImage;
+    Label7: TLabel;
+    PopupMenu: TPopupMenu;
+    SimpanCitraHasilAkhirPengolahan: TMenuItem;
+    SPD: TSavePictureDialog;
+    OPD: TOpenPictureDialog;
+    procedure SimpanCitraHasilAkhirPengolahanClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormBuffer: TFormBuffer;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitFormUtama;
+
+procedure TFormBuffer.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FormUtama.Position  := poScreenCenter;
+end;
+
+procedure TFormBuffer.SimpanCitraHasilAkhirPengolahanClick(Sender: TObject);
+var
+  CitraJPEG : TJPEGImage;
+begin
+  if SPD.Execute then
+    begin
+    CitraJPEG := TJPEGImage.Create;
+    try
+    case SPD.FilterIndex of
+        1:  {*.jpeg; *.jpg}
+        begin
+          with CitraJPEG do
+            begin
+              Assign(CitraHasil.Picture.Bitmap);
+              Smoothing           := True;
+              ProgressiveEncoding := True;
+            end;
+          //bila tidak ada nama kembar..
+          if not FileExists(SPD.FileName) then
+            begin
+              CitraJPEG.SaveToFile(SPD.FileName);
+              OPD.FileName        := SPD.FileName;
+            end
+          else
+            //bila ada nama kembar..
+            if (Application.MessageBox(
+              PChar('Nama file sudah digunakan' + #13 +
+                    'Apakah anda ingin menggantikan file itu ?'),
+              PChar('Konfirmasi'),
+                     MB_YESNO or MB_ICONEXCLAMATION) = IDYES) then
+                begin
+                  CitraJPEG.SaveToFile(SPD.FileName);
+                  OPD.FileName    := SPD.FileName;
+                end; end;
+
+        2:  {*.bmp}
+        begin
+        //bila tidak ada nama kembar..
+        if not FileExists(SPD.FileName) then
+          begin
+            CitraHasil.Picture.SaveToFile(SPD.FileName);
+            OPD.FileName          := SPD.FileName;
+          end
+        else
+        //bila ada nama kembar..
+        if (Application.MessageBox(
+          PChar('Nama file sudah digunakan' + #13 +
+                'Apakah anda ingin menggantikan file itu ?'),
+          PChar('Konfirmasi'),
+                 MB_YESNO or MB_ICONEXCLAMATION) = IDYES) then
+          begin
+            CitraHasil.Picture.SaveToFile(SPD.FileName);
+            OPD.FileName          := SPD.FileName;
+          end;
+        end; end;
+    finally
+      CitraHasil.Refresh;
+      CitraJPEG.Free;
+    end;
+  end;
+end;
+
+end.

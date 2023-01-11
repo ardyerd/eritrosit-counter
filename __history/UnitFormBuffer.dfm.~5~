@@ -1,0 +1,128 @@
+object FormBuffer: TFormBuffer
+  Left = 0
+  Top = 0
+  Caption = 'Citra Olah'
+  ClientHeight = 624
+  ClientWidth = 393
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object CitraHasil: TImage
+    Left = 199
+    Top = 490
+    Width = 186
+    Height = 127
+    Stretch = True
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 42
+    Height = 13
+    Caption = 'Keabuan'
+  end
+  object CitraKeabuan: TImage
+    Left = 8
+    Top = 27
+    Width = 185
+    Height = 134
+    Stretch = True
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 167
+    Width = 96
+    Height = 13
+    Caption = 'Ekualisasi Histogram'
+  end
+  object CitraEkualisasi: TImage
+    Left = 8
+    Top = 186
+    Width = 185
+    Height = 127
+    Stretch = True
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 319
+    Width = 74
+    Height = 13
+    Caption = 'Pangambangan'
+  end
+  object CitraPengambangan: TImage
+    Left = 8
+    Top = 338
+    Width = 185
+    Height = 127
+    Stretch = True
+  end
+  object CitraPelabelan: TImage
+    Left = 8
+    Top = 490
+    Width = 185
+    Height = 127
+    Stretch = True
+  end
+  object Pelabelan: TLabel
+    Left = 8
+    Top = 471
+    Width = 46
+    Height = 13
+    Caption = 'Pelabelan'
+  end
+  object Label4: TLabel
+    Left = 199
+    Top = 8
+    Width = 49
+    Height = 13
+    Caption = 'Filter Luas'
+  end
+  object CitraFilterLuas: TImage
+    Left = 199
+    Top = 27
+    Width = 186
+    Height = 134
+    Stretch = True
+  end
+  object Label5: TLabel
+    Left = 199
+    Top = 167
+    Width = 23
+    Height = 13
+    Caption = 'Erosi'
+  end
+  object Label6: TLabel
+    Left = 199
+    Top = 319
+    Width = 24
+    Height = 13
+    Caption = 'Dilasi'
+  end
+  object CitraErosi: TImage
+    Left = 199
+    Top = 186
+    Width = 186
+    Height = 127
+    Stretch = True
+  end
+  object CitraDilasi: TImage
+    Left = 199
+    Top = 338
+    Width = 186
+    Height = 127
+    Stretch = True
+  end
+  object Label7: TLabel
+    Left = 199
+    Top = 471
+    Width = 108
+    Height = 13
+    Caption = 'Hasil Akhir Pengolahan'
+  end
+end

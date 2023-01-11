@@ -1,0 +1,16 @@
+program EritrositCounter;
+
+uses
+  Vcl.Forms,
+  UnitFormUtama in 'UnitFormUtama.pas' {Form1},
+  UnitFormBuffer in 'D:\KULIAH\SKRIPSI\Program\UnitFormBuffer.pas' {FormBuffer};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormBuffer, FormBuffer);
+  Application.Run;
+end.
